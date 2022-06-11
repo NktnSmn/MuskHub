@@ -51,7 +51,7 @@ internal val pageLayoutWithChains = Layout(
             id = 1,
             width = 150,
             height = 150,
-            url = "https://3.bp.blogspot.com/-VVp3WvJvl84/X0Vu6EjYqDI/AAAAAAAAPjU/ZOMKiUlgfg8ok8DY8Hc-ocOvGdB0z86AgCLcBGAsYHQ/s1600/jetpack%2Bcompose%2Bicon_RGB.png"
+            url = "https://st.depositphotos.com/2547675/3009/i/450/depositphotos_30094505-stock-photo-time-clock.jpg"
         ),
         TextElement(
             id = 2,

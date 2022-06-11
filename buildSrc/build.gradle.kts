@@ -10,7 +10,7 @@ buildscript {
     }
 
     dependencies {
-        classpath(Deps.kotlinGradlePlugin)
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:_")
     }
 }
 
@@ -24,8 +24,8 @@ repositories {
 }
 
 dependencies {
-    implementation(Deps.gradleBuildToolsApi)
-    implementation(Deps.gradleBuildTools)
-    implementation(Deps.kotlinGradlePlugin)
-    implementation(Deps.kotlinStdLib)
+    implementation("com.android.tools.build:gradle-api:_")
+    implementation(Android.tools.build.gradlePlugin)
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:_")
+    implementation(Kotlin.stdlib)
 }

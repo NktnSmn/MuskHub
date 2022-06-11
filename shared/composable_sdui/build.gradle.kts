@@ -5,8 +5,8 @@ plugins {
 }
 applyComposeConfig()
 dependencies {
-    api(Deps.kotlinSerialization)
+    api(KotlinX.serialization.json)
 
-    api(Deps.composeConstraintLayout)
-    api(Deps.coilCompose)
+    api(AndroidX.constraintLayout.compose)
+    api(COIL.compose)
 }

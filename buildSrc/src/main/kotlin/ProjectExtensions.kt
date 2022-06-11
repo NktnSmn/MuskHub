@@ -1,14 +1,9 @@
 import com.android.build.gradle.BaseExtension
+import de.fayard.refreshVersions.core.versionFor
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.DependencyHandlerScope
 import org.gradle.kotlin.dsl.dependencies
-import org.gradle.kotlin.dsl.version
-import org.gradle.plugin.use.PluginDependenciesSpec
-
-fun PluginDependenciesSpec.addDependencyUpdatedPlugin() {
-    id(Deps.dependencyUpdatesPlugin) version Versions.dependencyUpdatesPlugin
-}
 
 fun Project.applyAndroidConfig(configExtensions: (BaseExtension.() -> Unit)? = null) {
     android.run {
@@ -38,8 +33,8 @@ fun Project.applyAndroidConfig(configExtensions: (BaseExtension.() -> Unit)? = n
 }
 
 fun DependencyHandlerScope.requiredAndroidDeps() {
-    implementation(Deps.appCompat)
-    implementation(Deps.constraintLayout)
+    implementation(AndroidX.appCompat)
+    implementation(AndroidX.constraintLayout)
 }
 
 @Suppress("UnstableApiUsage")
@@ -47,15 +42,15 @@ fun Project.applyComposeConfig() {
     android.run {
         buildFeatures.compose = true
         composeOptions {
-            kotlinCompilerExtensionVersion = Versions.compose
+            kotlinCompilerExtensionVersion = versionFor(AndroidX.compose.compiler)
         }
     }
     dependencies {
-        implementation(Deps.composeCompiler)
-        implementation(Deps.composeUi)
-        implementation(Deps.composeUiTooling)
-        implementation(Deps.composeUiFoundation)
-        implementation(Deps.composeMaterial)
+        implementation(AndroidX.compose.compiler)
+        implementation(AndroidX.compose.ui)
+        implementation(AndroidX.compose.ui.tooling)
+        implementation(AndroidX.compose.foundation)
+        implementation(AndroidX.constraintLayout.compose)
     }
 }
 

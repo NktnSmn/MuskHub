@@ -3,5 +3,5 @@ plugins {
 }
 
 dependencies {
-    api(Deps.appCompat)
+    api(AndroidX.appCompat)
 }

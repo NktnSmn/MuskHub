@@ -14,9 +14,9 @@ dependencies {
     (Modules.allShared + Modules.allFeaturesImpl).forEach { implementation(project(it)) }
 
     requiredAndroidDeps()
-    implementation(Deps.material)
+    implementation(Google.android.material)
 
-    testImplementation(Deps.robolectric)
-    testImplementation(Deps.mockk)
-    testImplementation(Deps.koinTest)
+    testImplementation(Testing.robolectric)
+    testImplementation(Testing.mockK)
+    testImplementation(Koin.test)
 }

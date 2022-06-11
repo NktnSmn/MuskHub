@@ -54,14 +54,14 @@ fun ConstrainScope.linkToVertical(constraint: LinearConstraint<ConstraintType.Ve
 }
 
 private fun ConstrainScope.linkTo(
-    anchorable: ConstrainScope.HorizontalAnchorable,
+    anchorable: HorizontalAnchorable,
     constraint: SingleConstraint<ConstraintType.Horizontal>?
 ) {
     anchorable.linkTo(anchorFor(constraint ?: return), constraint.margin.dp)
 }
 
 private fun ConstrainScope.linkTo(
-    anchorable: ConstrainScope.VerticalAnchorable,
+    anchorable: VerticalAnchorable,
     constraint: SingleConstraint<ConstraintType.Vertical>?
 ) {
     anchorable.linkTo(anchorFor(constraint ?: return), constraint.margin.dp)

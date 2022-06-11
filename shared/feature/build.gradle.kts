@@ -2,5 +2,5 @@ plugins {
     id("base-library")
 }
 dependencies {
-    api(Deps.koin)
+    api(Koin.android)
 }

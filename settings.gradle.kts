@@ -1,3 +1,13 @@
+pluginManagement {
+    plugins {
+        id("de.fayard.refreshVersions") version "0.40.2"
+    }
+}
+
+plugins {
+    id("de.fayard.refreshVersions")
+}
+
 @Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)

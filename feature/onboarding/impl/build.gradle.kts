@@ -9,10 +9,11 @@ dependencies {
     implementation(project(Modules.ui))
     implementation(project(Modules.composableSDUI))
 
-    implementation(Deps.kotlinSerialization)
+    implementation(KotlinX.serialization.json)
 
-    implementation(Deps.material)
-    implementation(Deps.viewPager)
-    implementation(Deps.composeConstraintLayout)
-    implementation(Deps.coilCompose)
+    implementation(Google.android.material)
+    implementation(AndroidX.viewPager2)
+    implementation(AndroidX.compose.material)
+    implementation(AndroidX.constraintLayout.compose)
+    implementation(COIL.compose)
 }
